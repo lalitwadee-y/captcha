@@ -1,15 +1,15 @@
 function createApp(pattern, operator, leftOperand, rightOperand){
   this.generate = function(){
 
-<<<<<<< HEAD
+//<<<<<<< HEAD
 
   };
   let left = new Left();
   let oper = new Operator();
   let right = new Right();
-=======
-  }
->>>>>>> eea547b011d6000369ff6ac965f04dfa181020f8
+//=======
+
+//>>>>>>> eea547b011d6000369ff6ac965f04dfa181020f8
 
 
   console.log(left.toString(pattern,leftOperand));
@@ -20,6 +20,7 @@ function createApp(pattern, operator, leftOperand, rightOperand){
 
 
   //return new Captcha(pattern, operator, leftOperand, rightOperand)
+  
 }
 
 function Operator(operator){
@@ -36,7 +37,7 @@ function Left(pattern,leftOperand){
   this.toString = function(pattern,leftOperand){
     if(pattern === 1){
       if(leftOperand === 0){ return '0'; }
-      else if(leftOperand === 1){ return '1';}
+      else if(leftOperand === 1){ return leftOperand;}
       else if(leftOperand === 2){ return '2';}
       else if(leftOperand === 3){ return '3';}
       else if(leftOperand === 4){ return '4';}
@@ -46,9 +47,9 @@ function Left(pattern,leftOperand){
       else if(leftOperand === 8){ return '8';}
       else if(leftOperand === 9){ return '9';}
     }
-<<<<<<< HEAD
+//<<<<<<< HEAD
   };
-=======
+//=======
     else if(pattern === 2){
       if(leftOperand === 0){ return 'ZERO';}
       else if(leftOperand === 1){ return 'ONE';}
@@ -63,18 +64,18 @@ function Left(pattern,leftOperand){
     }
 
   }
->>>>>>> eea547b011d6000369ff6ac965f04dfa181020f8
+//>>>>>>> eea547b011d6000369ff6ac965f04dfa181020f8
 }
 
 function Right(pattern,rightOperand){
   this.toString = function(pattern,rightOperand){
 
-<<<<<<< HEAD
+//<<<<<<< HEAD
       if(pattern === 1){
-=======
+//=======
     if(pattern === 1){
->>>>>>> eea547b011d6000369ff6ac965f04dfa181020f8
-      if(rightOperand === 1){ return 'ZERO';}
+//>>>>>>> eea547b011d6000369ff6ac965f04dfa181020f8
+      if(rightOperand === 0){ return 'ZERO';}
       else if(rightOperand === 1){ return 'ONE';}
       else if(rightOperand === 2){ return 'TWO'; }
       else if(rightOperand === 3){ return 'THREE';}
@@ -84,18 +85,6 @@ function Right(pattern,rightOperand){
       else if(rightOperand === 7){ return 'SEVEN';}
       else if(rightOperand === 8){ return 'EIGHT';}
       else if(rightOperand === 9){ return 'NINE';}
-    }
-    if(pattern === 2){
-      if(rightOperand === 0){ return '0'; }
-      else if(rightOperand === 1){ return '1';}
-      else if(rightOperand === 2){ return '2';}
-      else if(rightOperand === 3){ return '3';}
-      else if(rightOperand === 4){ return '4';}
-      else if(rightOperand === 5){ return '5';}
-      else if(rightOperand === 6){ return '6';}
-      else if(rightOperand === 7){ return '7';}
-      else if(rightOperand === 8){ return '8';}
-      else if(rightOperand === 9){ return '9';}
     }
   };
 }
