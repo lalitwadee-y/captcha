@@ -34,13 +34,26 @@ function Left(pattern,leftOperand){
       else if(leftOperand === 8){ return '8';}
       else if(leftOperand === 9){ return '9';}
     }
+    else if(pattern === 2){
+      if(leftOperand === 0){ return 'ZERO';}
+      else if(leftOperand === 1){ return 'ONE';}
+      else if(leftOperand === 2){ return 'TWO'; }
+      else if(leftOperand === 3){ return 'THREE';}
+      else if(leftOperand === 4){ return 'FOUR';}
+      else if(leftOperand === 5){ return 'FIVE';}
+      else if(leftOperand === 6){ return 'SIX';}
+      else if(leftOperand === 7){ return 'SEVEN';}
+      else if(leftOperand === 8){ return 'EIGHT';}
+      else if(leftOperand === 9){ return 'NINE';}
+    }
+
   }
 }
 
 function Right(pattern,rightOperand){
   this.toString = function(){
 
-    else if(pattern === 1){
+    if(pattern === 1){
       if(rightOperand === 0){ return 'ZERO';}
       else if(rightOperand === 1){ return 'ONE';}
       else if(rightOperand === 2){ return 'TWO'; }
