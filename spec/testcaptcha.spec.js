@@ -66,7 +66,7 @@ function Right(pattern,rightOperand){
 
     if(pattern === 1){
 
-      if(rightOperand === 1){ return 'ZERO';}
+      if(rightOperand === 0){ return 'ZERO';}
       else if(rightOperand === 1){ return 'ONE';}
       else if(rightOperand === 2){ return 'TWO'; }
       else if(rightOperand === 3){ return 'THREE';}
@@ -130,8 +130,8 @@ describe('Captcha App', () =>{
   describe('Pattern is 2', () =>{
     const pattern = 2
 
-    it('should return "FIVE + 4" when in input is 2,2,5,4', () =>{
-        expect(createApp(pattern, 2, 5, 4)).toEqual('FIVE + 4');
+    it('should return "FIVE - 4" when in input is 2,2,5,4', () =>{
+        expect(createApp(pattern, 2, 5, 4)).toEqual('FIVE - 4');
     })
   })
 })
