@@ -137,9 +137,6 @@ describe('Captcha App', () =>{
   describe('Pattern is 2', () =>{
     const pattern = 2
 
-    it('should return "FIVE - 4" when in input is 2,2,5,4', () =>{
-        expect(createApp(pattern, 2, 5, 4)).toEqual('FIVE - 4');
-    })
     it('should return "ONE + 6" when in input is 2,1,1,6', () =>{
         expect(createApp(pattern, 1, 1, 6)).toEqual('ONE + 6');
     })
@@ -154,6 +151,12 @@ describe('Captcha App', () =>{
     })
     it('should return "THREE + 8" when in input is 2,1,3,8', () =>{
         expect(createApp(pattern, 1, 3, 8)).toEqual('THREE + 8');
+    })
+    it('should return "FIVE - 4" when in input is 2,2,5,4', () =>{
+        expect(createApp(pattern, 2, 5, 4)).toEqual('FIVE - 4');
+    })
+    it('should return "SEVEN - 2" when in input is 2,2,7,2', () =>{
+        expect(createApp(pattern, 2, 7, 2)).toEqual('SEVEN - 2');
     })
   })
 })
