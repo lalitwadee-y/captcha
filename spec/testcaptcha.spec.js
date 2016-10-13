@@ -161,5 +161,8 @@ describe('Captcha App', () =>{
     it('should return "EIGHT - 1" when in input is 2,2,8,1', () =>{
         expect(createApp(pattern, 2, 8, 1)).toEqual('EIGHT - 1');
     })
+    it('should return "SIX - 3" when in input is 2,2,6,3', () =>{
+        expect(createApp(pattern, 2, 6, 3)).toEqual('SIX - 3');
+    })
   })
 })
