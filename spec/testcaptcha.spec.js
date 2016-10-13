@@ -2,29 +2,37 @@ function createApp(pattern, operator, leftOperand, rightOperand){
   this.generate = function(){
 
 
-  }
+  };
+  let left = new Left();
+  let oper = new Operator();
+  let right = new Right();
 
-  return (Left(pattern,leftOperand),Operator(operator),Right(pattern,rightOperand))
+
+  console.log(left.toString(pattern,leftOperand));
+  console.log(oper.toString(operator));
+  console.log(right.toString(pattern,rightOperand));
+
+  return (left.toString(pattern,leftOperand) + ' ' + oper.toString(operator) + ' '+ right.toString(pattern,rightOperand))
 
 
   //return new Captcha(pattern, operator, leftOperand, rightOperand)
 }
 
 function Operator(operator){
-  this.toString = function(){
+  this.toString = function(operator){
     if(operator === 1){
       return '+';
     }
     else if(operator === 2){
       return '-';
     }
-  }
+  };
 }
 function Left(pattern,leftOperand){
-  this.toString = function(){
+  this.toString = function(pattern,leftOperand){
     if(pattern === 1){
       if(leftOperand === 0){ return '0'; }
-      else if(leftOperand === 1){ return '1';}
+      else if(leftOperand === 1){ return leftOperand;}
       else if(leftOperand === 2){ return '2';}
       else if(leftOperand === 3){ return '3';}
       else if(leftOperand === 4){ return '4';}
@@ -34,13 +42,13 @@ function Left(pattern,leftOperand){
       else if(leftOperand === 8){ return '8';}
       else if(leftOperand === 9){ return '9';}
     }
-  }
+  };
 }
 
 function Right(pattern,rightOperand){
-  this.toString = function(){
+  this.toString = function(pattern,rightOperand){
 
-    else if(pattern === 1){
+      if(pattern === 1){
       if(rightOperand === 0){ return 'ZERO';}
       else if(rightOperand === 1){ return 'ONE';}
       else if(rightOperand === 2){ return 'TWO'; }
@@ -52,7 +60,7 @@ function Right(pattern,rightOperand){
       else if(rightOperand === 8){ return 'EIGHT';}
       else if(rightOperand === 9){ return 'NINE';}
     }
-  }
+  };
 }
 
 describe('Captcha App', () =>{
