@@ -1,7 +1,6 @@
 function createApp(pattern, operator, leftOperand, rightOperand){
   this.generate = function(){
 
-
   }
 
   return (Left(pattern,leftOperand),Operator(operator),Right(pattern,rightOperand))
@@ -80,6 +79,9 @@ describe('Captcha App', () =>{
     })
     it('should return "2 + ZERO" when in input is 1,1,2,0', () =>{
       expect(createApp(pattern, 1, 2, 0)).toEqual('2 + ZERO');
+    })
+    it('should return "3 + ZERO" when in input is 1,1,3,0', () =>{
+      expect(createApp(pattern, 1, 3, 0)).toEqual('3 + ZERO');
     })
   })
   describe('Pattern is 2', () =>{
