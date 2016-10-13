@@ -152,5 +152,8 @@ describe('Captcha App', () =>{
     it('should return "FOUR + 9" when in input is 2,1,4,9', () =>{
         expect(createApp(pattern, 1, 4, 9)).toEqual('FOUR + 9');
     })
+    it('should return "THREE + 8" when in input is 2,1,3,8', () =>{
+        expect(createApp(pattern, 1, 3, 8)).toEqual('THREE + 8');
+    })
   })
 })
