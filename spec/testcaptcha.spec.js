@@ -135,6 +135,9 @@ describe('Captcha App', () =>{
     it('should return "9 + SEVEN" when in input is 1,1,9,7', () =>{
       expect(createApp(pattern, 1, 9, 7)).toEqual('9 + SEVEN');
     })
+    it('should return "9 + EIGHT" when in input is 1,1,9,8', () =>{
+      expect(createApp(pattern, 1, 9, 8)).toEqual('9 + EIGHT');
+    })
     it('should return "0 - ZERO" when in input is 1,2,0,0', () =>{
       expect(createApp(pattern, 2, 0, 0)).toEqual('0 - ZERO');
     })
