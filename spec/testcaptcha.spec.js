@@ -129,6 +129,9 @@ describe('Captcha App', () =>{
     it('should return "0 - ZERO" when in input is 1,2,0,0', () =>{
       expect(createApp(pattern, 2, 0, 0)).toEqual('0 - ZERO');
     })
+    it('should return "0 - ONE" when in input is 1,2,0,1', () =>{
+      expect(createApp(pattern, 2, 0, 1)).toEqual('0 - ONE');
+    })
 
   })
   describe('Pattern is 2', () =>{
