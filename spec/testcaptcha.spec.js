@@ -83,6 +83,9 @@ describe('Captcha App', () =>{
     it('should return "3 + ZERO" when in input is 1,1,3,0', () =>{
       expect(createApp(pattern, 1, 3, 0)).toEqual('3 + ZERO');
     })
+    it('should return "4 + ZERO" when in input is 1,1,4,0', () =>{
+      expect(createApp(pattern, 1, 4, 0)).toEqual('4 + ZERO');
+    })
   })
   describe('Pattern is 2', () =>{
     const pattern = 2
