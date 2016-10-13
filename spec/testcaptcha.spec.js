@@ -140,11 +140,14 @@ describe('Captcha App', () =>{
     it('should return "FIVE - 4" when in input is 2,2,5,4', () =>{
         expect(createApp(pattern, 2, 5, 4)).toEqual('FIVE - 4');
     })
-    it('should return "ONE - 6" when in input is 2,1,1,6', () =>{
-        expect(createApp(pattern, 1, 1, 6)).toEqual('ONE - 6');
+    it('should return "ONE + 6" when in input is 2,1,1,6', () =>{
+        expect(createApp(pattern, 1, 1, 6)).toEqual('ONE + 6');
     })
-    it('should return "TWO - 7" when in input is 2,1,2,7', () =>{
-        expect(createApp(pattern, 1, 2, 7)).toEqual('TWO - 7');
+    it('should return "TWO + 7" when in input is 2,1,2,7', () =>{
+        expect(createApp(pattern, 1, 2, 7)).toEqual('TWO + 7');
+    })
+    it('should return "ZERO + 5" when in input is 2,1,0,5', () =>{
+        expect(createApp(pattern, 1, 0, 5)).toEqual('ZERO + 5');
     })
   })
 })
