@@ -209,5 +209,8 @@ describe('Captcha App', () =>{
     it('should return "FIVE - 4" when in input is 2,2,5,4', () =>{
         expect(createApp(pattern, 2, 5, 4)).toEqual('FIVE - 4');
     })
+    it('should return "FIVE - 5" when in input is 2,2,5,5', () =>{
+        expect(createApp(pattern, 2, 5, 5)).toEqual('FIVE - 5');
+    })
   })
 })
