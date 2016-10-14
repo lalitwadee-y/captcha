@@ -155,6 +155,9 @@ describe('Captcha App', () =>{
     it('should return "ZERO + 5" when in input is 2,1,0,5', () =>{
         expect(createApp(pattern, 1, 0, 5)).toEqual('ZERO + 5');
     })
+    it('should return "ZERO + 6" when in input is 2,1,0,6', () =>{
+        expect(createApp(pattern, 1, 0, 6)).toEqual('ZERO + 6');
+    })
     it('should return "ONE + 6" when in input is 2,1,1,6', () =>{
         expect(createApp(pattern, 1, 1, 6)).toEqual('ONE + 6');
     })
