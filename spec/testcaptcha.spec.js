@@ -1,21 +1,13 @@
 function createApp(pattern, operator, leftOperand, rightOperand){
   this.generate = function(){
 
-
   };
   let left = new Left();
   let oper = new Operator();
   let right = new Right();
 
-
-  //console.log(left.toString(pattern,leftOperand));
-  //console.log(oper.toString(operator));
-  //console.log(right.toString(pattern,rightOperand));
-
   return (left.toString(pattern,leftOperand) + ' ' + oper.toString(operator) + ' '+ right.toString(pattern,rightOperand))
 
-
-  //return new Captcha(pattern, operator, leftOperand, rightOperand)
 }
 
 function Operator(operator){
