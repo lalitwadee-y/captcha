@@ -152,21 +152,22 @@ describe('Captcha App', () =>{
   describe('Pattern is 2', () =>{
     const pattern = 2
 
+    it('should return "ZERO + 5" when in input is 2,1,0,5', () =>{
+        expect(createApp(pattern, 1, 0, 5)).toEqual('ZERO + 5');
+    })
     it('should return "ONE + 6" when in input is 2,1,1,6', () =>{
         expect(createApp(pattern, 1, 1, 6)).toEqual('ONE + 6');
     })
     it('should return "TWO + 7" when in input is 2,1,2,7', () =>{
         expect(createApp(pattern, 1, 2, 7)).toEqual('TWO + 7');
     })
-    it('should return "ZERO + 5" when in input is 2,1,0,5', () =>{
-        expect(createApp(pattern, 1, 0, 5)).toEqual('ZERO + 5');
+    it('should return "THREE + 8" when in input is 2,1,3,8', () =>{
+        expect(createApp(pattern, 1, 3, 8)).toEqual('THREE + 8');
     })
     it('should return "FOUR + 9" when in input is 2,1,4,9', () =>{
         expect(createApp(pattern, 1, 4, 9)).toEqual('FOUR + 9');
     })
-    it('should return "THREE + 8" when in input is 2,1,3,8', () =>{
-        expect(createApp(pattern, 1, 3, 8)).toEqual('THREE + 8');
-    })
+
     it('should return "FIVE - 4" when in input is 2,2,5,4', () =>{
         expect(createApp(pattern, 2, 5, 4)).toEqual('FIVE - 4');
     })
